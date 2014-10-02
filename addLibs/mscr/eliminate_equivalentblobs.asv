@@ -1,0 +1,10 @@
+function [mn, pn] = eliminate_equivalentblobs(mvec, pvec)
+
+for i=1:size(mvec,2)
+    c1 = mvec(2:3,i);
+    for j=i+1:size(mvec,2)
+
+        c2 = mvec(2:3,j);
+        if sqrt( sum((c1-c2).^2) ) < 5 && mvec(1,i)/mvec(1,j)> 0.95 ... 
+                && mvec(1,i)/mvec(1,j) < 1.05 && sqrt( sum((pvec(:,i)-pvec(:,j)).^2) )< 0.1
+            eliminate = [elij;

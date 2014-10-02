@@ -1,0 +1,122 @@
+MSCR version 1.01
+
+This is MSCR 1.01, an API for detecting maximally stable colour regions from
+RGB images. The algorithm is described in the CVPR07 paper "Maximally
+Stable Colour Regions for Recognition and Matching" by Per-Erik Forssén.
+There are two example applications; one is a Matlab MEX interface, and the
+other one is an OpenCV application using the highgui graphical user interface.
+
+Author is Per-Erik Forssén, perfo@isy.liu.se.
+
+
+License
+
+This is free software, published under the GNU General Public License
+(GPL). What this basically means is that you are free to use, modify,
+and redistribute the program under the same license. See the file
+COPYING for details.
+
+
+Files
+
+This archive should contain the following files
+
+README                This file
+COPYING               License file
+ChangeLog.txt         Log of changes between versions
+puzzle.png            Test image
+Makefile              Makefile for building executables
+matlab_demo.m         Demo of Matlab MEX extensions
+blobs_inside_image.m  Utility M-function that find blobs inside image
+...                   Various source files
+
+
+Platforms
+
+MSCR has been developed under Open SuSE Linux 10.1 and MacOS X 10.5.
+It should be possible to make it run on other UNIX versions as well, by making
+some modifications to the Makefile. Since the code is fairly self contained it
+should also be straight forward to get it to run on Windows platforms.
+
+
+OpenCV interface
+
+The mscr_opencv target is an OpenCV front-end to the code, and thus requires
+OpenCV to be installed. In order to build the executable, you will also need a
+C compiler environment.
+
+Please modify the OPENCV variable in the Makefile to point to the location
+where OpenCV is installed. For performance you may also want to modify the
+CFLAGS variable to make full use of your CPU. Additional speed can also be
+gained by defining -DINTEGER_EDGES, and making sure -DDOUBLE_FLOATS is NOT
+defined in the Makefile.
+
+Once the Makefile is correctly set up, the executable can be built using the
+command:
+> make mscr_opencv
+
+Once compiled, the program can be executed from a shell:
+> ./mscr_opencv
+
+In Linux you may also need to set the LD_LIBRARY_PATH variable to point to
+the location of the OpenCV shared object files.
+
+
+Matlab MEX interface
+
+The detect_mscr and draw_blobs targets constitute a Matlab MEX interface to the
+code, and thus require Matlab to be installed. In order to build the
+executables, you will also need a C compiler environment.
+
+Please modify the MATLAB variable in the Makefile to point to the location
+where Matlab is installed. For performance you may also want to modify the
+CFLAGS variable to make full use of your CPU. Additional speed can also be
+gained by defining -DINTEGER_EDGES in the Makefile.
+
+Note that -DDOUBLE_FLOATS should be passed to the compiler, since
+the input is passed from Matlab by reference, and Matlab uses
+doubles.
+
+Once the Makefile is correctly set up, the MEX files can be built using the
+commands:
+> make detect_mscr
+> make draw_blobs
+
+Compiling within Matlab should also be possible, but make sure that you set
+the DOUBLE_FLOATS flag:
+> mex -DDOUBLE_FLOATS detect_mscr.c image_buffer.c msr_util.c mexutil.c
+> mex -DDOUBLE_FLOATS draw_blobs.c image_buffer.c visualise.c mexutil.c
+
+Once the MEX commands are compiled, you can test the matlab demo by typing:
+> matlab_demo
+in Matlab.
+
+
+Documentation
+
+Documentation of usage of the Matlab MEX interface can be obtained by
+help <command> at the Matlab prompt. Or, to just review the input
+and output arguments you can run the command without any arguments.
+
+The OpenCV application can be run from the terminal, and should display
+all available controls in its window. Exit the program by double clicking
+the image, or pressing ESC.
+
+
+References
+
+The used algorithm is described in the CVPR2007 paper "Maximally Stable
+Colour Regions for Recognition and Matching", by Per-Erik Forssén.
+See also:
+http://www.cs.ubc.ca/~perfo/mscr/
+
+
+Bug Reports
+
+Please send bug reports, bug fixes, improvements, and success stories
+to the author at perfo@isy.liu.se. The API is of course provided as
+is, no warranty, etc.
+
+
+Linkoping March 10, 2009
+Per-Erik Forssén

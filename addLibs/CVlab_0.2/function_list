@@ -1,0 +1,50 @@
+ABSOLUTE Solve absolute orientation
+ART  Factorize camera matrix into intrinsic and extrinsic matrices
+ASSERT signal the failure of the condition s
+AUTOCAL Computes intrinsic parameters with autocalibration
+CALIBZ Camera calibration from 2D-2D correspondences in many views
+CAMERA Build a camera matrix
+DRAW_LINES Draw lines in cartesian form 
+EPIPOLE Extract the left epipole from a fundamental matrix
+EREC Computes a Euclidean reconstruction (motion only) 
+EUL Returns a rotation matrix from the Euler angles
+EXTERIOR Solve exterior orientation
+FLIN1 Find lines in an image with Hough transform.
+FM Computes fundametal matrix from point correspondence
+FUND Computes fundamental matrix and epipoles from camera matrices
+HM Computes homography from point correspondences (2D or 3D).
+HORN Solve relative orientation with Horn's algorithm.
+HOUGH Compute 2D Hough tansform
+ICP Iterative Closet Point algorithm.
+IEUL compute Euler angles (yaw,pitch,roll) given a rotation matrix 
+IKAN Computes the axis and angle of a rotation matrix
+IMHS Extracts salient points with Harris&Stephens' algorithm 
+IMSTEREO Stereo block-matching with sum of squared differences
+IMWARP Warp image with an homography
+INTERSECT  Reconstructs 3D structure by triangulation
+IQUAT calcola la matrice di rotazione dato il quaternione.
+ISMPP indica se una matrice e' una matrice di proiezione
+ISROT funzione che indica se la matrice e' una
+IVEC crea una matrice raggruppondo gli elemente del
+KAN calcola la matrice di rotazione di un certo angolo
+LHMATCH match two sets of points 
+LOWE solve exterior orientation with Lowe's algorithm
+MRMSE Multiple view RMSE
+NS Solve the null-space problem A*v=0 
+PARCAM Extract parameters from camera matrix
+PLOTREF plot a reference frame with the specified color and scale
+PLOTSEG plot a segment tranformed according to T
+PLR Compute polar decomposition
+PREC compute a projective reconstruction (structure and motion)
+PRECOND Normalize the coordinates of a point set (2D or 3D). 
+PROJ  calcola una trasformazione prospettica (dalle coordinate
+PT applica una trasformazione proiettiva 2D o 3D.
+QUAT Calcola il quaternione corrispondente ad una
+RECTIFY calcola le matrici di retificazione di due immagini.
+RESECT Camera resection (calibration) from 2D-3D point correspondences
+RIGID applica una trasformazione rigida.
+RMSE    Standard deviation.
+SR calcola la fattorizzazione SR della matrice essenziale
+STAR Return the skew-symmetric matrix X s.t. cross(x,y) = X*y
+TM calcola la matrice trifocale da corrispondenze
+TRIF calcola la matrice trifocale a partire dalle matrici 

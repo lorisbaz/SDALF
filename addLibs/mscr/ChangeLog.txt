@@ -1,0 +1,8 @@
+2009 March 10:
+     Exit if no camera.
+     Made some effort to compile on Windows
+
+2008 June 11: added blobs_inside_image.m
+
+2007 Jul 04: Version 1.0 released
+
