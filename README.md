@@ -1,9 +1,10 @@
 SDALF
 =====
 In this package, you find a updated version of the MATLAB code for following paper:
-M. Farenzena, L. Bazzani, A. Perina, V. Murino, and M. Cristani, Person Re-identification by 
-Symmetry-Driven Accumulation of Local Features, In IEEE Conference on Computer Vision and 
-Pattern Recognition (CVPR), 2010.
+
+**Person Re-identification by Symmetry-Driven Accumulation of Local Features**
+M. Farenzena, L. Bazzani, A. Perina, V. Murino, and M. Cristani
+*In IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2010*
 
 Three demos have been provided
 - L_main_tagging_SvsS.m : performs single-shot cross-validation on the given dataset, in order to emulate the 
@@ -17,8 +18,7 @@ NOTE: when performing the tests on the ETHZ datasets, remember to set SUBfac = 0
 test of the PLS paper have been performed on half resolution.
 		
 
-ADDITIONAL LIBS
-=========
+##ADDITIONAL LIBS
 We also provide with our package some additional libraries we used in our method. 
 - Maximally Stable Colour Regions (addLibs/mscr) http://www.cs.ubc.ca/~perfo/software/
 - CVlab (addLibs/CVlab_0.2) http://profs.sci.univr.it/~fusiello/teaching/visione/
@@ -26,8 +26,7 @@ We also provide with our package some additional libraries we used in our method
 - GMM clustering (addLibs/SandG)
 
 
-COMPILE
-=====
+##COMPILE
 Please note, some libraries contain mex-files that needs to be compiled for your machine. We provide 
 a limited set of binary within the package. If you do not find the binary for your machine, please 
 compile the source code (instructions in the external libraries folder "addLibs").
@@ -36,16 +35,15 @@ folder. whistcY does not need any dependence. For detect_mscr_masked please foll
 for compiling the MSCR.
 
 
-BIBTEX AND ACKNOWLEDGMENTS
-=====
-@inproceedings{Farenzena2010CVPR,
-author = {Farenzena, Michela and Bazzani, Loris and Perina, Alessandro and Murino, Vittorio and Cristani, Marco},
-title = {Person Re-Identification by Symmetry-Driven Accumulation of Local Features},
-booktitle = {Proceedings of the 2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
-year = {2010},
-publisher = {IEEE Computer Society},
-address = {San Francisco, CA, USA},
-}
+##BIBTEX AND ACKNOWLEDGMENTS
+	@inproceedings{Farenzena2010CVPR,
+	author = {Farenzena, Michela and Bazzani, Loris and Perina, Alessandro and Murino, Vittorio and Cristani, Marco},
+	title = {Person Re-Identification by Symmetry-Driven Accumulation of Local Features},
+	booktitle = {Proceedings of the 2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+	year = {2010},
+	publisher = {IEEE Computer Society},
+	address = {San Francisco, CA, USA},
+	}
 
 This research is founded by the EU-Project FP7 SAMURAI, grant FP7-SEC- 2007-01 No. 217899.
 The code was written by Loris Bazzani and Michela Farenzena. For any problems contact 
