@@ -1,7 +1,7 @@
 %% maximally-texturized distances computation 
 %load(['TxPatch_f' num2str(SUBfac) '.mat']);
 hwait	= waitbar(0,'Distance between epitextures...');
-part	= 1; % upper-body part
+part	= 2; % upper-body part
 for i=1:length(permit_inds)
    
   if ~isempty(max_txpatch(i,part).lbph) && ~isempty(max_txpatch(i,part).lbph{1} ) 
