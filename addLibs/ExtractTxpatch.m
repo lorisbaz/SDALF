@@ -155,6 +155,14 @@ for i=1:length(permit_inds)
                         end
                     else
                         rap = repmat(-1,size(data,2));
+                        
+                        warning('No clusters were found by MS_Clustering2, so setting max_txpatch(part) to empty')
+                        max_txpatch(i,part).patch	= [];
+                        max_txpatch(i,part).entr	= [];
+                        max_txpatch(i,part).w_ncc	= [];
+                        max_txpatch(i,part).pos		= [];
+                        max_txpatch(i,part).lbph	= [];
+                        max_txpatch(i,part).numel	= [];
                     end
                 end
                 
